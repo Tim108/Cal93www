@@ -8,8 +8,8 @@
 ?>
 
 <?php
+include 'corvee_database_connection.php';
 include 'task_code_modal.php';
-require 'database_connection.php';
 
 echo '<div class="container">';
 
@@ -21,7 +21,7 @@ for ($i = 0; $i < count($tasks); $i++) {
 
     echo '<div class="col-md-4">';
     echo '<h2>', $tasks[$i], '</h2>';
-    echo '<h4>', 'Wouter', '</h4>';
+    echo '<h4>', $histories[$tasks[$i]][0][0], '</h4>';
     echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
                 condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
                 euismod. Donec sed odio dui. </p>';
@@ -33,8 +33,12 @@ for ($i = 0; $i < count($tasks); $i++) {
         <ul class="dropdown-menu">
             <?php
             $task_history = $histories[$tasks[$i]];
-            for ($h = 0; $h < count($task_history); $h++) {
-                echo '<li><a href="#">', $task_history[$h], '</a></li>';
+            for ($h = 1; $h < count($task_history); $h++) {
+                $red = "";
+                if ($task_history[$h][1] == 0) {
+                    $red = '<span style="alignment:right; color:#a00000;" class="glyphicon glyphicon-remove"></span>';
+                }
+                echo '<li><a>', $task_history[$h][0], $red, '</a></li>';
             }
             ?>
         </ul>

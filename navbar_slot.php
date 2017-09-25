@@ -5,6 +5,7 @@
  * Date: 21/09/2017
  * Time: 17:06
  */
+
 ?>
 
 <!DOCTYPE html>
@@ -37,18 +38,20 @@
             <a class="navbar-brand" href="#">Cal93</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#" id="load_home" >Home</a></li>
-            <li><a href="#" id="load_corvee" >Corvee</a></li>
-            <li><a href="#" id="page2">Page 2</a></li>
-            <li><a href="#" id="page3">Page 3</a></li>
+            <li><a href="#home" id="load_home" >Home</a></li>
+            <li><a href="#corvee" id="load_corvee" >Corvee</a></li>
+            <li><a href="#page2" id="page2">Page 2</a></li>
+            <li><a href="#page3" id="page3">Page 3</a></li>
         </ul>
     </div>
 </nav>
 
 
-<div id="content_slot"></div>
 
+<div id="content_slot"></div>
 <script type="text/javascript" src="js/container_loaders.js"></script>
+
+
 
 </body>
 </html>

@@ -1,3 +1,9 @@
+$(document).ready(
+    function () {
+        $("#content_slot").load("home.php");
+    }
+);
+
 $("#load_home").click(
     function () {
         $("#content_slot").load("home.php");
