@@ -6,7 +6,6 @@
  * Time: 17:06
  */
 
-include 'pages/corvee_post_handler.php';
 ?>
 
 <!DOCTYPE html>
