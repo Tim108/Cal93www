@@ -10,7 +10,8 @@
 <?php
 include 'corvee_database_connection.php';
 include 'task_code_modal.php';
-//include 'corvee_post_handler.php';
+
+$_POST["page"] = "corvee";
 
 echo '<div class="container">';
 

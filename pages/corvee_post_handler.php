@@ -14,9 +14,9 @@
 <?php
 
 if (isset($_POST['form_code'])) {
-    console . log("herman");
     $chore_code = $_POST['form_code'];
     set_code_done($chore_code);
+    echo "code submitted";
 }
 
 function set_code_done($code)

@@ -46,7 +46,11 @@
     </div>
 </nav>
 
-
+<?php
+if ( isset($_POST["form_code"])) {
+    include 'pages/corvee_post_handler.php';
+}
+?>
 
 <div id="main-content">
 </div>
